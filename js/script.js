@@ -3,6 +3,10 @@ var customerName = document.getElementById('name').value;
 
 /*regular expression*/
 
+var customerName;
+var customerAge;
+var horsePower;
+
 function getName() {
 	var letters = /^$|^[A-z\s*]+$/;
 	customerName = document.getElementById('name').value;
@@ -28,7 +32,7 @@ function getHP() {
 	if(isNaN(parseInt(horsePower))) {
 		alert('Please input the horse power of your vehicle as a number here.');
 		document.getElementById('horsepower').value = '';
-	}
+	} 
 }
 
 document.getElementById('name').addEventListener('focusout', getName);
@@ -38,7 +42,12 @@ document.getElementById('horsepower').addEventListener('focusout', getHP);
 var customerCountry = document.getElementById('countrySelect').value;
 
 function calculateInsurance() {
-	var insurance
+	var insurance = 0;
+	if (customerName == null || horsePower == null || customerAge == null) {
+		alert("Please fill out all the necessary information.");
+		document.getElementById('calculationOutput').innerHTML = "";
+		return
+	}
 	if (customerCountry == 'Austria') {
 		insurance = horsePower * 100 / customerAge + 50;
 	} else if (customerCountry == 'Hungary') {

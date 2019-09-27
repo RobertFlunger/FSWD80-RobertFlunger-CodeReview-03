@@ -5,12 +5,14 @@
 	<title>Code Review 03 - Robert Flunger</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
 
+<body>
 <header>
 
-<img src="img/logo.png" alt="Insurance logo">
-<img src="img/banner.png" alt="FSWD Banner">
+<div id="header-logos">
+	<img src="img/logo.png" alt="Insurance logo" id="insurance-logo">
+	<img src="img/banner.png" alt="FSWD Banner" id="fswd-banner">
+</div>
 
 <nav>
 	<ul>
@@ -26,37 +28,53 @@
 <!-- insert hero image here -->
 <div id="hero">
 	<h1>Car insurance</h1>
+
+	<div id="calculator-wrapper">
+
+		<h2>Great coverage begins <br> with a custom quote</h2>
+
+		<div id="input-fields">
+			<div class="input">
+				<p>Your name:</p>
+				<input type="text" id="name" class="input-box" name="YourName"><br>
+			</div>
+
+			<div class="input">
+				<p>Age:</p>
+				<input type="text" id="age" class="input-box" name="Age"><br>
+			</div>
+
+			<div class="input">
+			<p>Country:</p>
+				<select name="country" id="countrySelect" class="input-box">
+					<option value="Austria">Austria</option>
+					<option value="Hungary">Hungary</option>
+					<option value="Greece">Greece</option>
+				</select><br>
+			</div>
+
+			<div class="input">
+				<p>Horsepower of your car (in PS):</p>
+				<input type="text" id="horsepower" name="horse_power" class="input-box"><br>
+			</div>
+		</div>
+
+		<input type="button" id="calculateButton" value="Calculate" class="big-button">
+
+		<div id="print">
+			<h3 id="calculationOutput"></h3>
+		</div>
+	</div>
+
 </div>
 
-<div id="calculator-wrapper">
-
-<h2>Great coverage begins with a custom quote</h2>
-
-<p>Your name:</p>
-<input type="text" id="name" name="YourName"><br>
-
-<p>Age:</p>
-<input type="text" id="age" name="Age"><br>
-
-<p>Country:</p>
-<select name="country" id="countrySelect">
-	<option value="Austria">Austria</option>
-	<option value="Hungary">Hungary</option>
-	<option value="Greece">Greece</option>
-</select><br>
-
-<p>Horsepower of your car (in PS):</p>
-<input type="text" id="horsepower" name="horse_power"><br>
-
-<input type="button" id="calculateButton" value="Calculate">
-
-<!-- Hide this element -->
-<p id="calculationOutput">Printed calculation goes here</p>
+<div id="info-box">
+	<div id="info-text">
+		<h3>Un-complicating car coverage</h3>
+		<p>Understanding your coverage options shouldn't be so hard.</p>
+		<p>We'll guide you through available coverage types, <br> starting with who and what is covered.</p>
+	</div>
 </div>
-
-<h3>Un-complicating car coverage</h3>
-<p>Understanding your coverage options shouldn't be so hard.</p>
-<p>We'll guide you through available coverage types, starting with who and what is covered.</p>
 
 <!-- Insert Standard and Add-on fields -->
 </main>

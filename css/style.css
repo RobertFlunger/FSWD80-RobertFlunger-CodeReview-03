@@ -1,3 +1,117 @@
+* {
+  margin: 0;
+  padding: 0; }
 
+body {
+  width: 60%;
+  margin: 0 auto; }
+
+header {
+  background-color: #FFF3F3; }
+  header #header-logos {
+    display: flex;
+    justify-content: space-between; }
+    header #header-logos img {
+      align-self: center; }
+
+nav {
+  background-color: #8E1616;
+  position: relative; }
+  nav ul {
+    list-style-type: none;
+    overflow: hidden; }
+    nav ul li {
+      float: left;
+      padding: 5px; }
+      nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font: "Poppins", Verdana sans-serif; }
+
+#hero {
+  background: #CECECE url("../img/traffic-332857_1920.jpg");
+  width: 100%;
+  height: 800px;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  #hero h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    padding: 40px 0px 30px 25px; }
+  #hero #calculator-wrapper {
+    border: 2px solid grey;
+    width: 85%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+    margin-top: 20px;
+    position: relative; }
+    #hero #calculator-wrapper h2 {
+      font-size: 3em;
+      padding-top: 20px; }
+    #hero #calculator-wrapper .big-button {
+      width: 200px;
+      background-color: #339235;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      border-radius: 10px;
+      border: none; }
+    #hero #calculator-wrapper #input-fields {
+      width: 70%;
+      margin: 25px auto;
+      padding-bottom: 3%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #hero #calculator-wrapper #input-fields .input {
+        width: 40%;
+        margin-top: 25px; }
+        #hero #calculator-wrapper #input-fields .input p {
+          font-size: 1em;
+          text-shadow: 3px; }
+        #hero #calculator-wrapper #input-fields .input .input-box {
+          width: 200px;
+          padding: 5px 5px;
+          border-radius: 3px;
+          border: 1px solid grey;
+          font-size: 1.5em; }
+        #hero #calculator-wrapper #input-fields .input #countrySelect {
+          font-size: 1.5em;
+          padding: 5px 5px;
+          width: 210px; }
+    #hero #calculator-wrapper #print {
+      position: absolute;
+      width: 60%;
+      bottom: 10%;
+      left: 20%;
+      color: #339235;
+      font-size: 2em; }
+
+#info-box {
+  background-color: #CECECE;
+  width: 100%;
+  height: 230px;
+  position: relative;
+  top: -40px;
+  z-index: -1; }
+  #info-box #info-text {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 70px; }
+    #info-box #info-text h3 {
+      font-size: 3em;
+      font-weight: normal; }
+    #info-box #info-text p {
+      font-size: 1.5em; }
+
+footer {
+  background-color: #171717; }
 
 /*# sourceMappingURL=style.css.map */
