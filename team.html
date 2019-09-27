@@ -15,9 +15,9 @@
 	<img src="img/banner.png" alt="FSWD Banner" id="fswd-banner">
 </div>
 
-<nav>
+<nav id="nav-top">
 	<ul>
-		<li><a href="#">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 		<li><a href="team.html">Team</a></li>
 	</ul>
 </nav>
@@ -25,6 +25,9 @@
 </header><!-- /header -->
 
 <main>
+<div id="team-page">
+
+<h1>Team members</h1>
 
 <script src="json/data.json"></script>
 <script>
@@ -33,15 +36,18 @@
 	document.writeln("<table border='1'><tr>");
 	for (var i=0; i<myteam.length; i++) {
 		document.writeln("<td>");
-		document.writeln("<table border='1' width=200>");
-		document.writeln("<tr><td><b>Name</b></td><td width=50>" + myteam[i].name + "</td></tr>");
-		document.writeln("<tr><td><b>E-Mail</b></td><td width=50>" + myteam[i].email + "</td></tr>");
-		document.writeln("<tr><td><b>Image</b></td><td width=50>" + myteam[i].image + "</td></tr>");
+		document.writeln("<table border='1' width=300>");
+		document.writeln("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
+		document.writeln("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
+		document.writeln("<tr><td><b>Image</b></td><td width=100>" + myteam[i].image + "</td></tr>");
 		document.writeln("</table>");
 		document.writeln("</td>");
 
 	}
 
 </script>
+</div>
 </main>
+
 </body>
+</html>

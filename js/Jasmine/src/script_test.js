@@ -1,8 +1,9 @@
-var customerName;
-var customerAge;
-var horsePower;
-var customerCountry;
 
+var customerName = 'Robert';
+var customerAge = 25;
+var horsePower = 80;
+var customerCountry = 'Austria';
+/*
 function getName() {
 	var letters = /^$|^[A-z\s*]+$/;
 	customerName = document.getElementById('name').value;
@@ -31,44 +32,32 @@ function getHP() {
 	} 
 }
 
-/*Have to set initital value for country, as dropdown menu is set on 'Austria' and it wouldn't have a value if we didn't change the selection*/
-customerCountry = document.getElementById('countrySelect').value;
-
-function getCountry() {
-	customerCountry = document.getElementById('countrySelect').value;
-}
-
-
-
 document.getElementById('name').addEventListener('focusout', getName);
 document.getElementById('age').addEventListener('focusout', getAge);
 document.getElementById('horsepower').addEventListener('focusout', getHP);
-document.getElementById('countrySelect').addEventListener('input', getCountry);
 
-function calculateInsurance(customerName, horsePower, customerAge, customerCountry) {
+var customerCountry = document.getElementById('countrySelect').value;*/
+
+function calculateInsurance() {
 	var insurance = 0;
-	horsePower = parseFloat(horsePower);
-	customerAge = parseFloat(customerAge);
-
 	if (customerName == null || horsePower == null || customerAge == null) {
 		alert("Please fill out all the necessary information.");
 		document.getElementById('calculationOutput').innerHTML = "";
 		return
 	}
-	if (customerCountry === 'Austria') {
+	if (customerCountry == 'Austria') {
 		insurance = horsePower * 100 / customerAge + 50;
-	} else if (customerCountry === 'Hungary') {
-		insurance = horsePower * 120 / customerAge + 100;
-	} else if (customerCountry === 'Greece') {
+	} else if (customerCountry == 'Hungary') {
+		insurance = (horsePower * 120 / customerAge) + 100;
+	} else {
 		insurance = horsePower * 150 / (customerAge + 3) + 50;
 	}
-	
-	document.getElementById('calculationOutput').innerHTML = customerName + ", your insurance costs " + insurance.toFixed(2) + "€.";
+	/*document.getElementById('calculationOutput').innerHTML = customerName + ", your insurance costs " + insurance.toFixed(2) + "€.";*/
 	return(insurance);
 }
 
-document.getElementById('calculateButton').addEventListener('click', function() {
-																		calculateInsurance(customerName, horsePower, customerAge, customerCountry) })
+/*document.getElementById('calculateButton').addEventListener('click', function() {
+																		calculateInsurance(horsePower, customerAge, customerCountry) })*/
 
 
 

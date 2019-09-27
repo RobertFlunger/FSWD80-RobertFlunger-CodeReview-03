@@ -1,9 +1,14 @@
+@charset "UTF-8";
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica, Verdana sans-serif;
   margin: 0;
   padding: 0; }
 
 body {
-  width: 60%;
+  max-width: 1100px;
   margin: 0 auto; }
 
 header {
@@ -12,22 +17,31 @@ header {
     display: flex;
     justify-content: space-between; }
     header #header-logos img {
-      align-self: center; }
+      align-self: center;
+      margin: 15px; }
+    @media only screen and (max-width: 480px) {
+      header #header-logos #fswd-banner {
+        display: none; } }
 
-nav {
+#nav-top, footer #nav-bottom {
   background-color: #8E1616;
-  position: relative; }
-  nav ul {
+  position: relative;
+  padding: 5px 20px; }
+  #nav-top ul, footer #nav-bottom ul {
     list-style-type: none;
     overflow: hidden; }
-    nav ul li {
+    @media only screen and (max-width: 480px) {
+      #nav-top ul, footer #nav-bottom ul {
+        display: table;
+        margin: 10px auto; } }
+    #nav-top ul li, footer #nav-bottom ul li {
       float: left;
       padding: 5px; }
-      nav ul li a {
+      #nav-top ul li a, footer #nav-bottom ul li a {
         display: block;
         text-decoration: none;
         color: white;
-        font: "Poppins", Verdana sans-serif; }
+        font: Helvetica, Verdana sans-serif; }
 
 #hero {
   background: #CECECE url("../img/traffic-332857_1920.jpg");
@@ -53,6 +67,9 @@ nav {
     #hero #calculator-wrapper h2 {
       font-size: 3em;
       padding-top: 20px; }
+      @media only screen and (max-width: 480px) {
+        #hero #calculator-wrapper h2 {
+          font-size: 1.5em; } }
     #hero #calculator-wrapper .big-button {
       width: 200px;
       background-color: #339235;
@@ -76,22 +93,29 @@ nav {
           font-size: 1em;
           text-shadow: 3px; }
         #hero #calculator-wrapper #input-fields .input .input-box {
-          width: 200px;
+          width: 81%;
           padding: 5px 5px;
           border-radius: 3px;
           border: 1px solid grey;
           font-size: 1.5em; }
+          @media only screen and (max-width: 480px) {
+            #hero #calculator-wrapper #input-fields .input .input-box {
+              font-size: 1em; } }
         #hero #calculator-wrapper #input-fields .input #countrySelect {
           font-size: 1.5em;
           padding: 5px 5px;
-          width: 210px; }
+          width: 81%; }
+          @media only screen and (max-width: 480px) {
+            #hero #calculator-wrapper #input-fields .input #countrySelect {
+              font-size: 1em; } }
     #hero #calculator-wrapper #print {
       position: absolute;
-      width: 60%;
+      width: 70%;
       bottom: 10%;
-      left: 20%;
+      left: 15%;
       color: #339235;
-      font-size: 2em; }
+      font-size: 2em;
+      border: 1px solid red; }
 
 #info-box {
   background-color: #CECECE;
@@ -108,10 +132,66 @@ nav {
     #info-box #info-text h3 {
       font-size: 3em;
       font-weight: normal; }
+      @media only screen and (max-width: 480px) {
+        #info-box #info-text h3 {
+          font-size: 1.5em; } }
+      @media only screen and (min-width: 481px) and (max-width: 1024px) {
+        #info-box #info-text h3 {
+          font-size: 2em; } }
     #info-box #info-text p {
       font-size: 1.5em; }
+      @media only screen and (max-width: 480px) {
+        #info-box #info-text p {
+          font-size: 1em; } }
+      @media only screen and (min-width: 481px) and (max-width: 1024px) {
+        #info-box #info-text p {
+          font-size: 1em; } }
+
+#offer-wrapper {
+  margin-top: -30px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; }
+  #offer-wrapper .offer {
+    width: 40%;
+    border: 1px solid grey;
+    box-shadow: 0 -2px black;
+    padding: 15px; }
+    #offer-wrapper .offer h3 {
+      color: #6E7694; }
+    #offer-wrapper .offer p {
+      color: #838F94; }
+    #offer-wrapper .offer ul {
+      list-style-position: inside;
+      list-style-type: none; }
+      #offer-wrapper .offer ul li:before {
+        content: "✓   ";
+        color: #8FD2D4;
+        font-weight: bold; }
 
 footer {
   background-color: #171717; }
+  footer #nav-bottom {
+    background-color: #171717; }
+  footer #logo-inv {
+    position: relative;
+    text-align: right; }
+    @media only screen and (max-width: 480px) {
+      footer #logo-inv {
+        text-align: center; } }
+  footer p {
+    text-align: center;
+    color: white;
+    padding-bottom: 5px; }
+
+/* Team page */
+#team-page h1 {
+  text-align: center;
+  padding: 25px 0; }
+
+table {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
