@@ -24,27 +24,62 @@
 
 </header><!-- /header -->
 
+<main >
 <div id="team-page">
 
 <h1>Team members</h1>
 
+
+</div>
+</main>
+
+
+</body>
+
+<footer>
+
+<nav id="nav-bottom">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="team.html">Team</a></li>
+	</ul>
+</nav>
+
+<div id="logo-inv">
+	<img src="img/logo-inv.png" alt="Insurance logo transparent">
+</div>
+
+<p>Robert Flunger - CodeFactory 2019</p>
+
+</footer>
+
 <script src="json/data.json"></script>
 	<script>
 		var myteam = JSON.parse(teamMembers);
-		console.log(myteam);
-		document.writeln("<table border='1'><tr>");
+
 		for (var i=0; i<myteam.length; i++) {
-			document.writeln("<td>");
-			document.writeln("<table border='1' width=300>");
-			document.writeln("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
-			document.writeln("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
-			document.writeln("<tr><td><b>Image</b></td><td width=100> <img src=" + myteam[i].image + " alt=\'person " + i + "\'></td></tr>");
-			document.writeln("</table>");
-			document.writeln("</td>");
-		}
+		document.getElementById("team-page").innerHTML += "<tr><table border='1' width=30%><tr><td><b>Name</b></td><td width=70%>" + myteam[i].name + "</td></tr><tr><td><b>E-Mail</b></td><td width=75%>" + myteam[i].email + "</td></tr><tr><td><b>Image</b></td><td width=75%> <img src=" + myteam[i].image + " alt='person' " + i + "'></td></tr></table></td>";
+			}
 
 	</script>
-</div>
 
-</body>
 </html>
+
+<!-- 			document.getElementById("team-page").innerHTML = ("<td>");
+document.getElementById("team-page").innerHTML = ("<table border='1' width=300>");
+document.getElementById("team-page").innerHTML = ("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
+document.getElementById("team-page").innerHTML = ("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
+document.getElementById("team-page").innerHTML = ("<tr><td><b>Image</b></td><td width=100> <img src=" + myteam[i].image + " alt=\'person " + i + "\'></td></tr>");
+document.getElementById("team-page").innerHTML = ("</table>");
+document.getElementById("team-page").innerHTML = ("</td>"); -->
+
+<!-- 	document.writeln("<table border='1'><tr>");
+	for (var i=0; i<myteam.length; i++) {
+		document.writeln("<td>");
+		document.writeln("<table border='1' width=300>");
+		document.writeln("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
+		document.writeln("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
+		document.writeln("<tr><td><b>Image</b></td><td width=100> <img src=" + myteam[i].image + " alt=\'person " + i + "\'></td></tr>");
+		document.writeln("</table>");
+		document.writeln("</td>");
+	} -->
