@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<title>Code Review 03 - Robert Flunger</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+<!----------------------------------------- Header START ---------------------------------------->
 <header>
 
-<div id="header-logos">
-	<img src="img/logo.png" alt="Insurance logo" id="insurance-logo">
-	<img src="img/banner.png" alt="FSWD Banner" id="fswd-banner">
-</div>
+	<div id="header-logos">
+		<img src="img/logo.png" alt="Insurance logo" id="insurance-logo">
+		<img src="img/banner.png" alt="FSWD Banner" id="fswd-banner">
+	</div>
 
-<nav id="nav-top">
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="team.html">Team</a></li>
-	</ul>
-</nav>
+	<nav id="nav-top">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="team.html">Team</a></li>
+		</ul>
+	</nav>
 
-</header><!-- /header -->	
-
-<!-- Main START  -->
+</header>
+<!----------------------------------------- Header END ---------------------------------------->
+<!----------------------------------------- Main START ----------------------------------------->
 <main>
-<!-- insert hero image here -->
-<div id="hero">
+<!-- Container with background img (not repeated) -->
+<div id="container">
 	<h1>Car insurance</h1>
-
+	<!-- Wrapper for insurance calculator with input fields -->
 	<div id="calculator-wrapper">
 
 		<h2>Great coverage begins <br> with a custom quote</h2>
-
+		<!-- Input fields in their own div with display: flex to make them appear nicely -->
 		<div id="input-fields">
 			<div class="input">
 				<p>Your name:</p>
@@ -61,14 +63,15 @@
 		</div>
 
 		<input type="button" id="calculateButton" value="Calculate" class="big-button">
-
+		<!-- empty div that will output the text and insurance cost on button press  -->
 		<div id="print">
 			<h3 id="calculationOutput"></h3>
 		</div>
+
 	</div>
-
 </div>
-
+<!-------- Container Div + calculator END -------->
+<!-- Grey info box that is slightly overlapped by transparent insurance div -->
 <div id="info-box">
 	<div id="info-text">
 		<h3>Un-complicating car coverage</h3>
@@ -76,7 +79,7 @@
 		<p>We'll guide you through available coverage types, <br> starting with who and what is covered.</p>
 	</div>
 </div>
-
+<!-- Product offer boxes with display: flex -->
 <div id="offer-wrapper">
 
 	<div class="offer">
@@ -107,10 +110,9 @@
 
 </div>
 
-<!-- Insert Standard and Add-on fields -->
 </main>
-<!-- Main END -->
-
+<!----------------------------------------- Main END ----------------------------------------->
+<!----------------------------------------- Footer START ----------------------------------------->
 <footer>
 
 <nav id="nav-bottom">
@@ -127,6 +129,8 @@
 <p>Robert Flunger - CodeFactory 2019</p>
 		
 </footer>
+<!----------------------------------------- Footer END ----------------------------------------->
+<!----------------------------------------- JS IMPORT ----------------------------------------->
 	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

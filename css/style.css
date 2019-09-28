@@ -23,38 +23,38 @@ header {
       header #header-logos #fswd-banner {
         display: none; } }
 
-#nav-top, footer #nav-bottom {
+#nav-top, footer #nav-bottom, #footer-team #nav-bottom {
   background-color: #8E1616;
   position: relative;
   padding: 5px 20px; }
-  #nav-top ul, footer #nav-bottom ul {
+  #nav-top ul, footer #nav-bottom ul, #footer-team #nav-bottom ul {
     list-style-type: none;
     overflow: hidden; }
     @media only screen and (max-width: 480px) {
-      #nav-top ul, footer #nav-bottom ul {
+      #nav-top ul, footer #nav-bottom ul, #footer-team #nav-bottom ul {
         display: table;
         margin: 10px auto; } }
-    #nav-top ul li, footer #nav-bottom ul li {
+    #nav-top ul li, footer #nav-bottom ul li, #footer-team #nav-bottom ul li {
       float: left;
       padding: 5px; }
-      #nav-top ul li a, footer #nav-bottom ul li a {
+      #nav-top ul li a, footer #nav-bottom ul li a, #footer-team #nav-bottom ul li a {
         display: block;
         text-decoration: none;
         color: white;
         font: Helvetica, Verdana sans-serif; }
 
-#hero {
+#container {
   background: #CECECE url("../img/traffic-332857_1920.jpg");
   width: 100%;
   height: 800px;
   background-size: contain;
   background-repeat: no-repeat; }
-  #hero h1 {
+  #container h1 {
     color: white;
     font-weight: bold;
     font-size: 3em;
     padding: 40px 0px 30px 25px; }
-  #hero #calculator-wrapper {
+  #container #calculator-wrapper {
     border: 2px solid grey;
     width: 85%;
     height: 80%;
@@ -64,13 +64,13 @@ header {
     padding-top: 25px;
     margin-top: 20px;
     position: relative; }
-    #hero #calculator-wrapper h2 {
+    #container #calculator-wrapper h2 {
       font-size: 3em;
       padding-top: 20px; }
       @media only screen and (max-width: 480px) {
-        #hero #calculator-wrapper h2 {
+        #container #calculator-wrapper h2 {
           font-size: 1.5em; } }
-    #hero #calculator-wrapper .big-button {
+    #container #calculator-wrapper .big-button {
       width: 200px;
       background-color: #339235;
       color: white;
@@ -78,7 +78,7 @@ header {
       font-size: 2em;
       border-radius: 10px;
       border: none; }
-    #hero #calculator-wrapper #input-fields {
+    #container #calculator-wrapper #input-fields {
       width: 70%;
       margin: 25px auto;
       padding-bottom: 3%;
@@ -86,29 +86,29 @@ header {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; }
-      #hero #calculator-wrapper #input-fields .input {
+      #container #calculator-wrapper #input-fields .input {
         width: 40%;
         margin-top: 25px; }
-        #hero #calculator-wrapper #input-fields .input p {
+        #container #calculator-wrapper #input-fields .input p {
           font-size: 1em;
           text-shadow: 3px; }
-        #hero #calculator-wrapper #input-fields .input .input-box {
+        #container #calculator-wrapper #input-fields .input .input-box {
           width: 81%;
           padding: 5px 5px;
           border-radius: 3px;
           border: 1px solid grey;
           font-size: 1.5em; }
           @media only screen and (max-width: 480px) {
-            #hero #calculator-wrapper #input-fields .input .input-box {
+            #container #calculator-wrapper #input-fields .input .input-box {
               font-size: 1em; } }
-        #hero #calculator-wrapper #input-fields .input #countrySelect {
+        #container #calculator-wrapper #input-fields .input #countrySelect {
           font-size: 1.5em;
           padding: 5px 5px;
           width: 81%; }
           @media only screen and (max-width: 480px) {
-            #hero #calculator-wrapper #input-fields .input #countrySelect {
+            #container #calculator-wrapper #input-fields .input #countrySelect {
               font-size: 1em; } }
-    #hero #calculator-wrapper #print {
+    #container #calculator-wrapper #print {
       position: absolute;
       width: 70%;
       bottom: 10%;
@@ -171,27 +171,29 @@ header {
         color: #8FD2D4;
         font-weight: bold; }
 
-footer {
+footer, #footer-team {
   background-color: #171717; }
-  footer #nav-bottom {
+  footer #nav-bottom, #footer-team #nav-bottom {
     background-color: #171717; }
-  footer #logo-inv {
+  footer #logo-inv, #footer-team #logo-inv {
     position: relative;
     text-align: right; }
     @media only screen and (max-width: 480px) {
-      footer #logo-inv {
+      footer #logo-inv, #footer-team #logo-inv {
         text-align: center; } }
-  footer p {
+  footer p, #footer-team p {
     text-align: center;
     color: white;
     padding-bottom: 5px; }
 
-/* Team page */
 #team-page h1 {
   text-align: center;
   padding: 25px 0; }
 
 table {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
+  table img {
+    width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

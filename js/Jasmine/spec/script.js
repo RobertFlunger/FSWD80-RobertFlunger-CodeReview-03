@@ -9,8 +9,22 @@ var horsePower;*/
 
 
 describe("Insurance cost function", function() {
-	it("should output string and values according to input variables", function() {
+	it("should output string and values following country selection", function() {
 		expect(calculateInsurance('Robert', 80, 25, 'Austria')).toEqual(370);
+		expect(calculateInsurance('Robert', 80, 25, 'Hungary')).toEqual(484);
+		expect(calculateInsurance('Robert', 80, 25, 'Greece')).toEqual(478.57142857142856);
+	});
+});
+
+describe("Insurance cost function", function() {
+	it("should return an empty string if an input variable is missing", function() {
+		expect(calculateInsurance('Robert', 25, 'Austria')).toEqual(NaN);
+	});
+});
+
+describe("getName function", function() {
+	it("should output a string of characters", function() {
+		expect(checkName(customerName)).toEqual(jasmine.any(String));
 	});
 });
 

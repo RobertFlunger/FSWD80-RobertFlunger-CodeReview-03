@@ -24,30 +24,27 @@
 
 </header><!-- /header -->
 
-<main>
 <div id="team-page">
 
 <h1>Team members</h1>
 
 <script src="json/data.json"></script>
-<script>
-	var myteam = JSON.parse(teamMembers);
-	console.log(myteam);
-	document.writeln("<table border='1'><tr>");
-	for (var i=0; i<myteam.length; i++) {
-		document.writeln("<td>");
-		document.writeln("<table border='1' width=300>");
-		document.writeln("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
-		document.writeln("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
-		document.writeln("<tr><td><b>Image</b></td><td width=100>" + myteam[i].image + "</td></tr>");
-		document.writeln("</table>");
-		document.writeln("</td>");
+	<script>
+		var myteam = JSON.parse(teamMembers);
+		console.log(myteam);
+		document.writeln("<table border='1'><tr>");
+		for (var i=0; i<myteam.length; i++) {
+			document.writeln("<td>");
+			document.writeln("<table border='1' width=300>");
+			document.writeln("<tr><td><b>Name</b></td><td width=100>" + myteam[i].name + "</td></tr>");
+			document.writeln("<tr><td><b>E-Mail</b></td><td width=100>" + myteam[i].email + "</td></tr>");
+			document.writeln("<tr><td><b>Image</b></td><td width=100> <img src=" + myteam[i].image + " alt=\'person " + i + "\'></td></tr>");
+			document.writeln("</table>");
+			document.writeln("</td>");
+		}
 
-	}
-
-</script>
+	</script>
 </div>
-</main>
 
 </body>
 </html>
